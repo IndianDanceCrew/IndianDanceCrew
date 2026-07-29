@@ -9,20 +9,23 @@
 <style>
 
 *{
+margin:0;
+padding:0;
 box-sizing:border-box;
+font-family:Arial, sans-serif;
 }
 
 body{
-margin:0;
-font-family:Arial, sans-serif;
-background:#ffffff;
-color:#111;
+background:#000;
+color:white;
 }
 
 nav{
-background:#111;
-padding:15px;
+position:absolute;
+width:100%;
+padding:20px;
 text-align:center;
+z-index:10;
 }
 
 nav a{
@@ -32,83 +35,208 @@ margin:15px;
 font-weight:bold;
 }
 
+
 .hero{
-padding:70px 20px;
+
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
 text-align:center;
-background:linear-gradient(#111,#333);
-color:white;
+padding:20px;
+
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
+url("logo.png");
+
+background-size:cover;
+background-position:center;
+
 }
+
 
 .logo{
-width:170px;
-height:170px;
+
+width:180px;
+height:180px;
 border-radius:50%;
-border:5px solid white;
+border:4px solid white;
+
 }
+
 
 .hero h1{
-font-size:50px;
-margin:20px 0 10px;
+
+font-size:55px;
+margin-top:20px;
+
 }
+
+
+.hero h2{
+
+font-size:28px;
+margin:10px;
+
+}
+
 
 .hero p{
-font-size:20px;
+
+font-size:18px;
+color:#ddd;
+max-width:600px;
+
 }
+
 
 .button{
+
 display:inline-block;
-padding:15px 30px;
-margin:10px;
-background:#ff9800;
-color:white;
-border-radius:30px;
+margin:15px 8px;
+padding:15px 35px;
+background:white;
+color:black;
+border-radius:40px;
 text-decoration:none;
 font-weight:bold;
+
 }
+
 
 .section{
-padding:50px 20px;
+
+padding:70px 20px;
 text-align:center;
+
 }
+
 
 .section h2{
-font-size:35px;
+
+font-size:40px;
+margin-bottom:30px;
+
 }
+
 
 .card{
-max-width:800px;
-margin:25px auto;
-padding:30px;
-background:#f5f5f5;
-border-radius:20px;
+
+max-width:900px;
+margin:auto;
+background:#111;
+padding:35px;
+border-radius:25px;
+
 }
+
 
 .card p{
+
+color:#ccc;
 font-size:18px;
-line-height:1.7;
-color:#444;
+line-height:1.8;
+
 }
 
+
 .grid{
+
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
+
 }
+
 
 .box{
+
+background:#111;
 width:280px;
 margin:15px;
-padding:25px;
-background:#111;
-color:white;
+padding:30px;
 border-radius:20px;
+
 }
 
-footer{
+
+.box h3{
+
+margin-bottom:15px;
+
+}
+
+
+.box p{
+
+color:#ccc;
+
+}
+
+
+.reels{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+
+}
+
+
+.reel{
+
 background:#111;
-color:white;
+padding:40px 20px;
+border-radius:20px;
+
+}
+
+
+.contact{
+
+background:white;
+color:black;
+
+}
+
+
+.contact p{
+
+color:#333;
+
+}
+
+
+footer{
+
+padding:25px;
+background:#111;
 text-align:center;
-padding:20px;
+color:#aaa;
+
+}
+
+
+@media(max-width:600px){
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero h2{
+
+font-size:22px;
+
+}
+
+.section h2{
+
+font-size:30px;
+
+}
+
 }
 
 </style>
@@ -120,26 +248,32 @@ padding:20px;
 
 
 <nav>
+
 <a href="#">Home</a>
 <a href="#about">About</a>
 <a href="#work">Work</a>
 <a href="#contact">Contact</a>
+
 </nav>
 
 
 
 <section class="hero">
 
+
+<div>
+
 <img src="logo.png" class="logo">
+
 
 <h1>Indian Dance Crew</h1>
 
 <h2>India’s Dance Crew</h2>
 
-<p>Where Passion Meets Performance</p>
 
 <p>
-Celebrating dance, creativity and talent across India.
+Where Passion Meets Performance.
+A platform connecting dancers, creators, celebrities and brands through dance.
 </p>
 
 
@@ -153,28 +287,29 @@ Collaborate
 </a>
 
 
+</div>
+
+
 </section>
 
 
 
 <section class="section" id="about">
 
+
 <h2>About Us</h2>
+
 
 <div class="card">
 
 <p>
-IndianDanceCrew is a dance platform connecting dancers,
-creators, celebrities and brands through inspiring performances,
-collaborations and viral content.
-</p>
-
-<p>
-Our mission is to discover talent, promote dance culture
-and build India's biggest dance community.
+IndianDanceCrew celebrates dance, creativity and talent from across India.
+We discover dancers, promote performances and create opportunities for
+artists, creators and brands to collaborate.
 </p>
 
 </div>
+
 
 </section>
 
@@ -182,30 +317,33 @@ and build India's biggest dance community.
 
 <section class="section" id="work">
 
+
 <h2>What We Do</h2>
 
 
 <div class="grid">
 
+
 <div class="box">
-<h3>💃 Talent Features</h3>
-<p>Showcasing talented dancers from across India.</p>
+<h3>💃 Dancer Features</h3>
+<p>Showcasing talented dancers and creators.</p>
 </div>
 
 
 <div class="box">
-<h3>📱 Viral Content</h3>
-<p>Creating engaging dance videos and trends.</p>
+<h3>🎬 Dance Content</h3>
+<p>Creating engaging and viral dance videos.</p>
 </div>
 
 
 <div class="box">
 <h3>🤝 Collaborations</h3>
-<p>Working with creators, brands and artists.</p>
+<p>Working with brands, artists and celebrities.</p>
 </div>
 
 
 </div>
+
 
 </section>
 
@@ -213,81 +351,91 @@ and build India's biggest dance community.
 
 <section class="section">
 
-<h2>Featured Videos</h2>
 
-<div class="card">
+<h2>Featured Reels</h2>
 
-<p>
-🔥 Trending Dance Challenges<br><br>
-⭐ Celebrity Collaborations<br><br>
-💃 Street Dance Performances<br><br>
-🌸 Classical Fusion<br><br>
-🎧 Hip-Hop Showcases<br><br>
-🇮🇳 Cultural Dance Celebrations
-</p>
+
+<div class="reels">
+
+
+<div class="reel">
+🔥 Trending Dance Challenge
+</div>
+
+
+<div class="reel">
+⭐ Celebrity Collaboration
+</div>
+
+
+<div class="reel">
+💃 Street Performance
+</div>
+
+
+<div class="reel">
+🇮🇳 Cultural Dance
+</div>
+
 
 </div>
+
 
 </section>
 
 
 
 <section class="section">
+
 
 <h2>Why Indian Dance Crew?</h2>
 
+
 <div class="card">
 
 <p>
-✔ Growing dance community<br>
-✔ Professional collaborations<br>
-✔ Creative content<br>
-✔ Opportunities for creators<br>
-✔ Passion for dance
+
+✓ Growing dance community<br>
+✓ Professional collaborations<br>
+✓ Creative performances<br>
+✓ Opportunities for creators<br>
+✓ Passion for dance
+
 </p>
 
 </div>
+
 
 </section>
 
 
 
-<section class="section" id="contact">
+<section class="section contact" id="contact">
+
 
 <h2>Collaborate With Us</h2>
 
-<div class="card">
 
 <p>
-Are you a brand, celebrity, choreographer or creator?
+Brands, celebrities, choreographers and creators —
+let’s create something amazing together.
 </p>
 
-<p>
-Let's create amazing dance content together.
-</p>
+
+<br>
 
 
 <a class="button" href="mailto:Lokeshbangari76@gmail.com">
 Contact Us
 </a>
 
-</div>
 
+<br><br>
 
-<div class="card">
-
-<h2>Follow Us</h2>
 
 <p>
 Instagram: @IndianDanceCrew
 </p>
-
-
-<a class="button" href="https://instagram.com/IndianDanceCrew">
-Follow Instagram
-</a>
-
-</div>
 
 
 </section>
